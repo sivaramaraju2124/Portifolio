@@ -1,64 +1,909 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swami Siva Rama Raju - AI/ML Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-content .description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-img {
+            height: 180px;
+            width: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 3px solid white;
+        }
+
+        .hero-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .about-image {
+            margin-bottom: 2rem;
+        }
+
+        .about-profile-img {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 20px 50px 20px 50px;
+            border: 4px solid #667eea;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .about-profile-img:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .stats {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            background: rgba(102, 126, 234, 0.15);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1.5rem;
+            gap: 1rem;
+            height: 100px; /* fixed height for uniform header */
+        }
+
+
+        .project-logo {
+            height: 100%;           /* fill full height of header */
+            width: auto;            /* maintain aspect ratio */
+            max-height: 100px;      /* max height matches header height */
+            object-fit: contain;
+        }
+        .project-title {
+            font-size: 1.2rem; /* adjust as needed */
+            margin: 0;
+        }
+
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tech-tag {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .project-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-link:hover {
+            color: #764ba2;
+        }
+
+        /* Education Section */
+        .education-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .education-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .education-item::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 2rem;
+            width: 15px;
+            height: 15px;
+            background: #667eea;
+            border-radius: 50%;
+        }
+
+        .education-item h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-meta {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .grade {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .contact-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-item:hover {
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .stats {
+                flex-direction: column;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p>Accenture Intern | Aspiring Developer | Always Learning</p>
-  </header>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Swami Siva Rama Raju</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am currently doing an internship at Accenture and trying to learn new skills every day.</p>
-  </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Swami Siva Rama Raju Gorrela</h1>
+                <p class="subtitle">AI & ML Engineering Student</p>
+                <p class="description">
+                    Passionate about artificial intelligence and machine learning with hands-on experience in developing intelligent solutions. 
+                    Specializing in Python, Java, and competitive programming with a strong foundation in data science and deep learning.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> View My Projects
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Get In Touch
+                    </a>
+                </div>
+            </div>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Python</li>
-      <li>HTML, CSS, JavaScript</li>
-      <li>Streamlit</li>
-      <li>Git, GitHub</li>
-    </ul>
-  </section>
+            <!-- Profile Image -->
+            <div class="hero-image">
+                <img src="assets/hero.png" alt="Swami Siva Rama Raju" style="height: 250px; width: 250px; border-radius: 50%; object-fit: cover; border: 4px solid white;" />
+            </div>
+        </div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="projects/project1.html">AI Quiz App with Proctoring</a></li>
-      <li><a href="projects/project2.html">Multilingual Chatbot - VidyaAI++</a></li>
-    </ul>
-  </section>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down" style="color: white; font-size: 1.5rem;"></i>
+        </div>
+    </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <p>Intern at Accenture (May 2025 - Present)</p>
-  </section>
 
-  <section id="certificates">
-    <h2>Certificates & Badges</h2>
-    <p><a href="assets/images/accenture-badge.jpg">Accenture Badge</a></p>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="about-grid fade-in">
+                <div class="about-left">
+                    <div class="about-image">
+                        <img src="assets/profile.png" alt="Swami Siva Rama Raju - About" class="about-profile-img" />
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">9.84</span>
+                            <div class="stat-label">CGPA</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">300+</span>
+                            <div class="stat-label">LeetCode Problems</div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <div class="stat-label">ML Projects</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>AI & ML Engineering Student</h3>
+                    <p>
+                        I'm a third-year Computer Science Engineering student at Mohan Babu University, specializing in Artificial Intelligence and Machine Learning. 
+                        With a current CGPA of 9.84, I've been consistently excelling in my academic journey while building practical skills in AI/ML.
+                    </p>
+                    <p>
+                        My passion lies in developing intelligent solutions that can make a real-world impact. I've completed over 15 machine learning and deep learning projects, 
+                        with 5+ deployed using Streamlit. My experience ranges from sentiment analysis and loan prediction models to advanced educational platforms powered by AI.
+                    </p>
+                    <p>
+                        I'm also an active competitive programmer with 300+ problems solved on LeetCode, and experience on platforms like CodeChef and GeeksforGeeks. 
+                        This has strengthened my problem-solving abilities and algorithmic thinking.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="resume">
-    <h2>Resume</h2>
-    <a href="assets/resume/your-resume.pdf" download>Download Resume</a>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-chart-bar"></i> Data Science & Analytics</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Visualization</span>
+                        <span class="skill-tag">Data Cleaning</span>
+                        <span class="skill-tag">Feature Engineering</span>
+                        <span class="skill-tag">EDA</span>
+                        <span class="skill-tag">Statistics</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-brain"></i> Machine Learning & AI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Supervised Learning</span>
+                        <span class="skill-tag">Unsupervised Learning</span>
+                        <span class="skill-tag">Neural Networks</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Sentiment Analysis</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-tools"></i> Tools & Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
+                        <span class="skill-tag">Scikit-Learn</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">Jupyter</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: yourname@email.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-  </section>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <img src="assets/vidyaailogo.jpg" alt="VidyaAI Logo" class="project-logo" style="height: 90px; width: auto;padding: 6px; border-radius: 10px;"/>
+                        <h3 class="project-title">VidyaAI++ | AI Educational Platform</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Developed a comprehensive multilingual AI-powered educational website with real-time learning support, quiz generation, speech/text processing, and webcam-based proctoring aligned with NEP 2020 standards.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">Gemini API</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Computer Vision</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sivaramaraju2124/VidyaAI-Team-ARJUNA" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://vidyaai-team-arjuna.onrender.com/" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-  <footer>
-    <p>&copy; 2025 Your Name</p>
-  </footer>
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <img src="assets/codeForgeLogo.jpeg" alt="CodeForge Logo" class="project-logo" style="height: 90px; width: auto;padding: 6px; border-radius: 10px;"/>
+                        <h3 class="project-title">CodeForge | AI Code Editor</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Built an intelligent coding platform featuring real-time code suggestions, intelligent error detection, image-to-code extraction, and an interactive AI assistant panel for enhanced development experience.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">Groq API</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">Judge0</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/sivaramaraju2124/CodeForge" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://code-forge.streamlit.app/" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <img src="assets/LoanEase.png" alt="LoanEase Logo" class="project-logo" />
+                        <h3 class="project-title">LoanEase | Bank Loan Approval Predictor</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Created an intelligent model to evaluate loan eligibility based on multiple factors including income, CIBIL score, and loan terms. Features interactive predictions with user-friendly interface.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">Scikit-Learn</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Machine Learning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Swami-Siva-Rama-Raju/Bank-Approval-Prediction" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://bank-approval-prediction.streamlit.app/" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Education & Experience</h2>
+            <div class="education-timeline">
+                <div class="education-item fade-in">
+                    <h3>Bachelor's in AI & Machine Learning</h3>
+                    <div class="education-meta">Mohan Babu University | Oct 2022 - Present</div>
+                    <p>Specialized program focusing on artificial intelligence and machine learning with hands-on projects and industry exposure.</p>
+                    <div class="grade">CGPA: 9.84 (Up to 2nd year)</div>
+                </div>
+
+                <div class="education-item fade-in">
+                    <h3>AIML Intern</h3>
+                    <div class="education-meta">Andhra Pradesh State Skill Development Corporation | May 2024 - June 2024</div>
+                    <p>Worked on sentiment analysis projects, data preprocessing, and scalable AI solutions. Enhanced skills in data handling and model deployment.</p>
+                </div>
+
+                <div class="education-item fade-in">
+                    <h3>Intermediate Education</h3>
+                    <div class="education-meta">Vignana Bharathi Junior College | Nov 2020 - March 2022</div>
+                    <div class="grade">Grade: 97.7%</div>
+                </div>
+
+                <div class="education-item fade-in">
+                    <h3>Secondary Education</h3>
+                    <div class="education-meta">Sri Sai DTR High School | 2019 - 2020</div>
+                    <div class="grade">Grade: 95.5%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title" style="color: white;">Let's Connect</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                    I'm always excited to discuss AI/ML projects, collaborate on innovative solutions, or explore new opportunities. 
+                    Feel free to reach out!
+                </p>
+                
+                <div class="contact-info">
+                    <a href="mailto:swamisivaramaraju@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        swamisivaramaraju@gmail.com
+                    </a>
+                    <a href="tel:+917660944946" class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        +91 7660944946
+                    </a>
+                    <a href="www.linkedin.com/in/gorrela-swami-siva-rama-raju-07a570291" class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn Profile
+                    </a>
+                    <a href="https://github.com/sivaramaraju2124" class="contact-item">
+                        <i class="fab fa-github"></i> 
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in class
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Typing effect for hero title (optional enhancement)
+        function typeWriter(element, text, speed = 100) {
+            element.textContent = '';
+            for (let i = 0; i < text.length; i++) {
+                setTimeout(() => {
+                    element.textContent += text.charAt(i);
+                }, speed * i);
+            }
+        }
+
+        // Add some interactive hover effects
+        document.querySelectorAll('.project-card, .skill-category').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add a subtle parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            const rate = scrolled * -0.5;
+            hero.style.transform = `translateY(${rate}px)`;
+        });
+    </script>
 </body>
 </html>
