@@ -1,4 +1,4 @@
-# <div align="center">🚀 Welcome to My Digital Universe 🚀</div>
+# <div align="center">🚀 Welcome to My Personal Portfolio 🚀</div>
 
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=35&duration=3000&pause=1000&color=00F7FF&background=00000000&center=true&vCenter=true&width=800&lines=AI+%26+ML+Enthusiast;Deep+Learning+Explorer;Data+Science+Wizard;Code+Architect;Innovation+Seeker!" alt="Typing SVG" />
