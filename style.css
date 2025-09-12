@@ -1754,7 +1754,7 @@ body {
     border: 1px solid var(--border-color);
     padding: 2.5rem;
     border-radius: 25px;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     position: relative;
     width: calc(50% - 3rem);
@@ -1791,7 +1791,7 @@ body {
 .education-item::before {
     content: '';
     position: absolute;
-    top: 3rem;
+    top: 2rem;
     width: 20px;
     height: 20px;
     background: var(--primary-color);
@@ -1837,7 +1837,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-size: 1.5rem;
     font-weight: 700;
 }
