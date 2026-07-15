@@ -18,7 +18,7 @@ export function About() {
           >
             <div className="absolute inset-0 bg-primary/20 mix-blend-overlay z-10" />
             <img 
-              src="/assets/profile.png" 
+              src="/assets/about-profile.png" 
               alt="About" 
               className="w-full h-full object-cover object-top"
             />
