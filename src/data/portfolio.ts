@@ -105,18 +105,18 @@ export const portfolioData = {
   achievements: [
     {
       icon: "🤖",
-      title: "4+ Full-Stack AI Projects",
-      description: "Architected and successfully deployed multiple End-to-End Artificial Intelligence applications leveraging NLP and Computer Vision."
+      title: "20+ ML & DL Projects Completed",
+      description: "Built and successfully deployed 20+ Machine Learning projects, showcasing real-world applications in AI, CV, and NLP."
     },
     {
       icon: "💡",
       title: "600+ LeetCode Problems Solved",
-      description: "Demonstrated strong algorithmic proficiency and data structure mastery by solving over 600 complex coding challenges."
+      description: "Strong foundation in Data Structures and Algorithms, solving 600+ coding problems on LeetCode."
     },
     {
       icon: "🏆",
-      title: "Hackathon Excellence",
-      description: "Competed in multiple inter-college hackathons and consistently secured Top 10 positions by delivering innovative tech solutions."
+      title: "Hackathon Achievements",
+      description: "Participated in inter-college hackathons and secured Top 10 positions in two separate events."
     }
   ]
 };
