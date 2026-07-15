@@ -3,7 +3,7 @@ export const portfolioData = {
     name: "Swami Siva Rama Raju Gorrela",
     title: "Final-year B.Tech AIML Student",
     description: "Final-year B.Tech AIML student with strong knowledge of Python, Data Structures, and Machine Learning. Experienced in developing AI/ML-based applications, REST APIs, and data-driven solutions. Skilled in frontend and backend development using modern web technologies.",
-    resumeLink: "https://drive.google.com/file/d/1B4LVcPDmfRTQMvROquGu84Ml8lVpKGI4/view?usp=sharing"
+    resumeLink: "https://drive.google.com/file/d/1fvQkEF4n5OQGd8RS-1PJVWYWZD0xzoJa/view?usp=sharing"
   },
   about: {
     stats: [

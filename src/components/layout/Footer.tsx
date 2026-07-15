@@ -17,7 +17,7 @@ export function Footer() {
           <a href="https://github.com/sivaramaraju2124" target="_blank" rel="noopener noreferrer" className="text-textMuted hover:text-white transition-colors">
             <FaGithub size={20} />
           </a>
-          <a href="https://linkedin.com/in/swami-siva-rama-raju-gorrela" target="_blank" rel="noopener noreferrer" className="text-textMuted hover:text-white transition-colors">
+          <a href="https://www.linkedin.com/in/gorrela-swami-siva-rama-raju-07a570291/" target="_blank" rel="noopener noreferrer" className="text-textMuted hover:text-white transition-colors">
             <FaLinkedin size={20} />
           </a>
           <a href="mailto:swamisivaramaraju@gmail.com" className="text-textMuted hover:text-white transition-colors">

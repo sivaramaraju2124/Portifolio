@@ -46,7 +46,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="https://drive.google.com/file/d/1B4LVcPDmfRTQMvROquGu84Ml8lVpKGI4/view?usp=sharing"
+            href="https://drive.google.com/file/d/1fvQkEF4n5OQGd8RS-1PJVWYWZD0xzoJa/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 bg-primary/10 text-primary border border-primary/20 rounded-lg text-sm font-medium hover:bg-primary hover:text-white transition-all"
