@@ -12,9 +12,9 @@ export const portfolioData = {
       { label: "LeetCode Problems", value: "600+" }
     ],
     paragraphs: [
-      "I'm a final-year Computer Science Engineering student at Mohan Babu University, specializing in Artificial Intelligence and Machine Learning. With a current CGPA of 9.71, I have a strong foundation in Data Structures, Algorithms, and Machine Learning concepts.",
-      "My experience spans across developing AI/ML-based applications, REST APIs, and data-driven solutions through academic and real-time projects. I am highly skilled in frontend and backend development using modern tools like Flask, Streamlit, and SQL. I possess strong problem-solving and debugging abilities with a keen interest in building AI-driven systems.",
-      "I'm an active competitive programmer with a strong foundation in Data Structures and Algorithms, having solved over 600 problems on LeetCode. I thrive on tackling complex technical challenges and continuously expanding my software development skillset."
+      "I am a final-year Computer Science engineering student specializing in Artificial Intelligence and Machine Learning. Consistently performing in the top percentile of my cohort (9.71 CGPA), I combine rigorous academic fundamentals with practical engineering execution to build scalable, AI-driven solutions.",
+      "My engineering philosophy centers on end-to-end ownership. From architecting robust REST APIs to integrating generative AI models, I focus on delivering tangible impact. By leveraging modern stacks like React, Python, and SQL, I have developed platforms like VidyaAI++ and CodeForge that solve real-world problems through intuitive interfaces and intelligent backend logic.",
+      "Beyond full-stack development, I have a deep passion for algorithmic optimization. Having conquered over 600 complex data structure and algorithm challenges on LeetCode, I thrive on writing highly efficient, optimized code and tackling ambiguous technical constraints."
     ]
   },
   skills: [
