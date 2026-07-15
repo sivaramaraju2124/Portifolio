@@ -67,7 +67,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-          className="relative hidden md:block"
+          className="relative mt-12 md:mt-0"
         >
           <div className="relative w-full max-w-md mx-auto aspect-square">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary to-accent rounded-full blur-2xl opacity-20 animate-pulse" />
