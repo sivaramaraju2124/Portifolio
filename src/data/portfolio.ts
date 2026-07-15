@@ -101,5 +101,22 @@ export const portfolioData = {
       duration: "2019 - 2020",
       grade: "Grade: 95.5%"
     }
+  ],
+  achievements: [
+    {
+      icon: "🤖",
+      title: "4+ Full-Stack AI Projects",
+      description: "Architected and successfully deployed multiple End-to-End Artificial Intelligence applications leveraging NLP and Computer Vision."
+    },
+    {
+      icon: "💡",
+      title: "600+ LeetCode Problems Solved",
+      description: "Demonstrated strong algorithmic proficiency and data structure mastery by solving over 600 complex coding challenges."
+    },
+    {
+      icon: "🏆",
+      title: "Hackathon Excellence",
+      description: "Competed in multiple inter-college hackathons and consistently secured Top 10 positions by delivering innovative tech solutions."
+    }
   ]
 };
