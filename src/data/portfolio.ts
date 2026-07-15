@@ -8,12 +8,12 @@ export const portfolioData = {
   about: {
     stats: [
       { label: "CGPA", value: "9.71" },
-      { label: "Projects in AI/ML", value: "20+" },
+      { label: "End-to-End AI Projects", value: "4+" },
       { label: "LeetCode Problems", value: "600+" }
     ],
     paragraphs: [
       "I am a final-year Computer Science engineering student specializing in Artificial Intelligence and Machine Learning. Consistently performing in the top percentile of my cohort (9.71 CGPA), I combine rigorous academic fundamentals with practical engineering execution to build scalable, AI-driven solutions.",
-      "My engineering philosophy centers on end-to-end ownership. From architecting robust REST APIs to integrating generative AI models, I focus on delivering tangible impact. By leveraging modern stacks like React, Python, and SQL, I have developed platforms like VidyaAI++ and CodeForge that solve real-world problems through intuitive interfaces and intelligent backend logic.",
+      "My engineering philosophy centers on end-to-end ownership. From architecting robust REST APIs to integrating generative AI models, I focus on delivering tangible impact. By leveraging modern stacks like Python, Flask, and SQL, I have developed platforms like VidyaAI++ and CodeForge that solve real-world problems through intuitive interfaces and intelligent backend logic.",
       "Beyond full-stack development, I have a deep passion for algorithmic optimization. Having conquered over 600 complex data structure and algorithm challenges on LeetCode, I thrive on writing highly efficient, optimized code and tackling ambiguous technical constraints."
     ]
   },
@@ -36,7 +36,7 @@ export const portfolioData = {
     },
     {
       category: "Web Tech",
-      items: ["HTML", "CSS", "Streamlit", "React"]
+      items: ["HTML", "CSS", "Streamlit"]
     },
     {
       category: "Tools & DBs",
