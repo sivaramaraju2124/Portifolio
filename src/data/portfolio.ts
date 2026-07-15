@@ -8,7 +8,6 @@ export const portfolioData = {
   about: {
     stats: [
       { label: "CGPA", value: "9.71" },
-      { label: "End-to-End AI Projects", value: "4+" },
       { label: "LeetCode Problems", value: "600+" }
     ],
     paragraphs: [

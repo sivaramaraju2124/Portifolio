@@ -23,11 +23,6 @@ export function About() {
               className="w-full h-full object-cover object-top"
             />
           </motion.div>
-          
-          <div className="absolute -bottom-6 -right-6 lg:-right-12 glass-card p-6 rounded-2xl hidden md:block">
-            <div className="text-4xl font-display font-bold text-primary mb-1">20+</div>
-            <div className="text-sm text-textMuted font-medium">AI & ML Projects<br/>Completed</div>
-          </div>
         </div>
 
         <div className="lg:col-span-7 flex flex-col gap-8">
@@ -50,7 +45,7 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-3 gap-4 pt-6 border-t border-border"
+            className="grid grid-cols-2 gap-4 pt-6 border-t border-border"
           >
             {stats.map((stat, i) => (
               <div key={i} className="text-center sm:text-left">
