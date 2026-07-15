@@ -104,9 +104,9 @@ export const portfolioData = {
   ],
   achievements: [
     {
-      icon: "🤖",
-      title: "20+ ML & DL Projects Completed",
-      description: "Built and successfully deployed 20+ Machine Learning projects, showcasing real-world applications in AI, CV, and NLP."
+      icon: "🥈",
+      title: "2nd Place in Coding Competition",
+      description: "Secured 2nd place in a competitive programming competition conducted by our college coding club."
     },
     {
       icon: "💡",
