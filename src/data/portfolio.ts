@@ -118,5 +118,11 @@ export const portfolioData = {
       title: "Hackathon Achievements",
       description: "Participated in inter-college hackathons and secured Top 10 positions in two separate events."
     }
-  ]
+  ],
+  contact: {
+    email: "swamisivaramaraju@gmail.com",
+    phone: "+91 7660944946",
+    location: "Chirala, Bapatla district, AP",
+    mapLink: "https://maps.app.goo.gl/2c8yDHQqvKdqetyF7"
+  }
 };

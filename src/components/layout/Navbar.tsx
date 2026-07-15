@@ -21,6 +21,7 @@ export function Navbar() {
     { name: "Achievements", href: "#achievements" },
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
