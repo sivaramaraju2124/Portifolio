@@ -75,7 +75,7 @@ export const portfolioData = {
         "Contributed to an AI-powered placement readiness platform with assessments, coding challenges, mock interviews, and proctoring.",
         "Enhanced platform features, resolved UI issues, and improved responsiveness across multiple modules. Performed feature testing, workflow validation, and deployment support."
       ],
-      skills: ["Web Development", "Testing", "UI/UX", "Deployment"]
+      skills: ["Software Development", "Web Development", "Testing", "UI/UX", "Deployment"]
     },
     {
       role: "Summer Intern",
