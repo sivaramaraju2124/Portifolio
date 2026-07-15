@@ -96,6 +96,12 @@ export const portfolioData = {
       grade: "CGPA: 9.71/10"
     },
     {
+      degree: "Intermediate Education",
+      institution: "Vignana Bharathi Junior College",
+      duration: "2020 - 2022",
+      grade: "Score: 97.7%"
+    },
+    {
       degree: "Secondary Education",
       institution: "Sai DTR High School",
       duration: "2019 - 2020",
